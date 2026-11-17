@@ -1,0 +1,19 @@
+[project]
+name = "gammacorr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Tomasz Dziób", email = "tom.dziob@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "opencv-python==5.0.0.93",
+    "openexr>=3.5.4",
+]
+
+[tool.uv]
+package = false
+
