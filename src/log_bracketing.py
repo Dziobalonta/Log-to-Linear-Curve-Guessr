@@ -1,3 +1,5 @@
+# FILE USED ONLY FOR TESTING THE LIBRARIES AND FUNCTIONS IN OPENCV, NOT NEEDED
+
 import cv2
 import glob
 import numpy as np

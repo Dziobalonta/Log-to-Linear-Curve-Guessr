@@ -1,5 +1,6 @@
-from pathlib import Path
+# FILE USED ONLY FOR TESTING THE LIBRARIES AND FUNCTIONS IN OPENCV, NOT NEEDED
 
+from pathlib import Path
 import cv2
 import numpy as np
 import OpenEXR

@@ -272,7 +272,7 @@ def save_linear_exr(path, linear_bgr):
 
 def save_gamma22_tiff(path, linear_bgr):
     """Linear -> gamma 2.2 -> 16-bit TIFF, for viewing."""
-    gamma = np.clip(linear_bgr, 0, 1) ** (1 / 2.2)         # cut above 1, then the power
+    gamma = np.clip(linear_bgr, 0, 1) ** (1 / 2.2) # cut above 1, then the power
     cv2.imwrite(path, np.round(gamma * 65535).astype(np.uint16))
 
 # ---------- Main Function ----------
@@ -305,7 +305,7 @@ def main():
     linear = auto_exposure(apply_correction(images[middle], lut))
 
     os.makedirs("output", exist_ok=True)
-    name = os.path.splitext(os.path.basename(files[middle]))[0]   # "A001_01032221_S028" [1] - extension .tif
+    name = os.path.splitext(os.path.basename(files[middle]))[0] # "A001_01032221_S028" [1] - extension .tif
     save_linear_exr(os.path.join("output", name + "_lin.exr"), linear)
     save_gamma22_tiff(os.path.join("output", name + "_g22.tif"), linear)
     print("saved to output/")
